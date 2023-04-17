@@ -1,0 +1,18 @@
+server:
+  port: 8888
+management:
+  zipkin:
+    tracing:
+      endpoint: https://zipkin.localdev.me:8488/api/v2/spans
+logging:
+  level:
+    com.example: TRACE
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
